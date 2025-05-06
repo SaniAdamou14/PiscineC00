@@ -4,15 +4,14 @@
 # Objectif : vérifie si un fichier existe dans le répertoire courant
 # Auteur : Mahamane Sani Adamou Mahamane
 
-echo -n "Entrez le nom du fichier : "
-read filename
+# Demande à l'utilisateur de saisir le nom du fichier
+printf "Entrez le nom du fichier : "
+# Lecture de l'entrée utilisateur
+read -r filename
 
-if [ -n "$filename" ]; then
-    if [ -f "$filename" ]; then
-        echo "Le fichier '$filename' existe"
-    else
-        echo "Le fichier '$filename' n'existe pas"
-    fi
+# Vérification si le fichier existe
+if [ -f "$filename" ]; then
+    printf "Le fichier '%s' existe\n" "$filename"
 else
-    echo "Erreur : aucun nom de fichier saisi"
+    printf "Le fichier '%s' n'existe pas\n" "$filename"
 fi
