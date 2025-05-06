@@ -4,14 +4,10 @@
 # Objectif : Vérifier si un fichier donné existe
 # Auteur : Mahamane Sani Adamou Mahamane
 
-# Demander à l'utilisateur de saisir le nom du fichier
-echo -n "Entrez le nom du fichier : "
-read filename
-
 
 # Vérifier si le fichier existe
-if [ -f "$filename" ]; then
-    echo "Le fichier '$filename' existe"
+if [ -f Sample.txt ]; then
+    echo "Le fichier 'Sample.txt' existe"
 else
-    echo "Le fichier '$filename' n'existe pas"
+    echo "Le fichier 'Sample.txt' n'existe pas"
 fi
