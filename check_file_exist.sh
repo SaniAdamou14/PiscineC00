@@ -1,18 +1,14 @@
 #!/bin/bash
 
-# Script : check_file_exist.sh
-# Objectif : Vérifier si un fichier donné existe
+# Script : create_directory.sh
+# Objectif : vérifie si un fichier existe dans le répertoire courant
 # Auteur : Mahamane Sani Adamou Mahamane
 
-# Vérifier si aucun argument n'est passé
-if [ -z "$1" ]; then
-    echo "Erreur : aucun nom de fichier fourni"
-    exit 1
-fi
+echo -n "Entrez le nom du fichier : "
+read filename
 
-# Vérifier si le fichier existe
-if [ -f "$1" ]; then
-    echo "Le fichier '$1' existe"
+if [ -f "$filename" ]; then
+    echo "Le fichier '$filename' existe"
 else
-    echo "Le fichier '$1' n'existe pas"
+    echo "Le fichier '$filename' n'existe pas"
 fi
